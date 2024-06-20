@@ -1,11 +1,6 @@
-def exemple():
-    print('hello world')
 
+import PyPDF2
 
-def introduser():
-    print('my name is mrs fuck you')
-
-    print('123')
-
-if __name__ == '__main__':
-    introduser()
+reader = PyPDF2.PdfReader('King_S._Pod_Kupolom.a4.pdf')
+print(len(reader.pages))
+print(reader.pages[25].extract_text())
